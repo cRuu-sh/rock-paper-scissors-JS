@@ -17,6 +17,12 @@ function getComputerChoice(max) {
 
 }
 
+function getHumanChoice() { 
+    let input = prompt("Input your choice : (Rock, Paper, Scissors)");
+    return input;
+}
+
 let y = getComputerChoice(3);
 
 console.log(y);
+console.log(getHumanChoice());
