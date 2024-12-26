@@ -1,6 +1,3 @@
-let humanInput = getHumanChoice();
-let computerInput = getComputerChoice();
-
 function getComputerChoice() { 
     let x = Math.floor(Math.random() * 3);
     if (x == 0) {
@@ -22,32 +19,34 @@ function getHumanChoice() {
 
 
 function playGame() {
+    humanInput = getHumanChoice();
+    computerInput = getComputerChoice();
     let humanScore = 0;
     let computerScore = 0;
     function playRound(humanChoice, computerChoice) {
         if (humanChoice == "rock" && computerChoice == "paper" ) {
             console.log("Computer wins! Rock lose to paper");
-            return computerScore++;
+            computerScore++;
             return alert("Computer wins! Rock lose to paper");
         } else if (humanChoice == "rock" && computerChoice == "scissors") {
             console.log("You wins! Rock beat scissors");
-            return humanScore++;
+            humanScore++;
             return alert("You wins! Rock beat scissors");
         } else if (humanChoice == "paper" && computerChoice == "rock") {
             console.log("You wins! Paper beat rock");
-            return humanScore++;
+            humanScore++;
             return alert("You wins! Paper beat rock");
         } else if (humanChoice == "paper" && computerChoice == "scissors") {
             console.log("Computer wins! Paper lose to scissors");
-            return computerScore++;
+            computerScore++;
             return alert("Computer wins! Paper lose to scissors");
         } else if (humanChoice == "scissors" && computerChoice == "paper") {
             console.log("You wins! Scissors beat paper");
-            return humanScore++;
+            humanScore++;
             return alert("You wins! Scissors beat paper");
         } else if (humanChoice == "scissors" && computerChoice == "rock") {
             console.log("Computer wins! Scissors lose to rock");
-            return computerScore++;
+            computerScore++;
             return alert("Computer wins! Scissors lose to rock");
         } else if (humanChoice == computerChoice) {
             console.log("Draw, you both picked the same hand!");
@@ -57,12 +56,13 @@ function playGame() {
             return alert("Hold on! Try again!");
         }   
     }
+    playRound(humanInput, computerInput);
+    console.log("Human Score : " + humanScore + " | " + "Computer Score : " + computerScore);
+    console.log("Human Choice : " + humanInput + " | " + "Computer Input : " + computerInput);
+
 }
-
-playRound(humanInput, computerInput);
-
 
 // Console log
 // console.log("Human Choice : " + humanInput);
 // console.log("Computer Choice : " + computerInput);
-console.log("Human Score : " + humanScore + " | " + "Computer Score : " + computerScore);
+// console.log("Human Score : " + humanScore + " | " + "Computer Score : " + computerScore);
