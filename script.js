@@ -1,3 +1,9 @@
+let humanInput = getHumanChoice();
+let computerInput = getComputerChoice(3);
+
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice(max) { 
     let x = Math.floor(Math.random() * max);
     if (x == 0) {
@@ -13,14 +19,33 @@ function getComputerChoice(max) {
 }
 
 function getHumanChoice() { 
-    let input = prompt("Input your choice : (Rock, Paper, Scissors)");
+    let input = prompt("Input your choice : (Rock, Paper, Scissors)").toLowerCase();
     return input;
 }
 
-let humanScore = 0;
-let computerScore = 0;
+function playRound(humanChoice, computerChoice) {
+    if (humanChoice == "rock" && computerChoice == "paper" ) {
+        return alert("Human wins!");
+    } else if (humanChoice == "rock" && computerChoice == "scissors") {
+        return alert("Computer wins!");
+    } else if (humanChoice == "paper" && computerChoice == "rock") {
+        return alert("Human wins!");
+    } else if (humanChoice == "paper" && computerChoice == "scissors") {
+        return alert("Computer wins!");
+    } else if (humanChoice == "scissors" && computerChoice == "paper") {
+        return alert("Human wins!");
+    } else if (humanChoice == "scissors" && computerChoice == "rock") {
+        return alert("Computer wins!");
+    } else if (humanChoice == computerChoice) {
+        return alert("Draw, you both picked the same hand!");
+    } else {
+        return alert("Hold on! Try again!");
+    }   
+}
 
-let y = getComputerChoice(3);
+playRound(humanInput, computerInput)
 
-console.log(y);
-console.log(getHumanChoice());
+
+// Console log
+console.log("Human Choice : " + humanInput);
+console.log("Computer Choice : " + computerInput);
