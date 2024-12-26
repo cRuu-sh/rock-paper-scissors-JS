@@ -1,8 +1,5 @@
-console.log("Hello world! from external script.js");
-
 function getComputerChoice(max) { 
     let x = Math.floor(Math.random() * max);
-
     if (x == 0) {
         x = "rock"; 
     } else if (x == 1) {
@@ -12,15 +9,16 @@ function getComputerChoice(max) {
     } else {
         x = "anomaly";
     }
-
     return x;
-
 }
 
 function getHumanChoice() { 
     let input = prompt("Input your choice : (Rock, Paper, Scissors)");
     return input;
 }
+
+let humanScore = 0;
+let computerScore = 0;
 
 let y = getComputerChoice(3);
 
