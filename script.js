@@ -17,7 +17,6 @@ function getHumanChoice() {
     return input;
 }
 
-
 function playGame() {
     humanInput = getHumanChoice();
     computerInput = getComputerChoice();
@@ -59,7 +58,6 @@ function playGame() {
     playRound(humanInput, computerInput);
     console.log("Human Score : " + humanScore + " | " + "Computer Score : " + computerScore);
     console.log("Human Choice : " + humanInput + " | " + "Computer Input : " + computerInput);
-
 }
 
 // Console log
