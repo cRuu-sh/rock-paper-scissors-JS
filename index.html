@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <!-- <script src="./script.js"></script> -->
-     <script src="./script copy.js"></script>
+    <script src="./script copy.js"></script>
     <title>Rock Paper Scissors JS</title>
 </head>
 <body>
-    <h1>Rock Paper Scissors using Javascript</h1>
-    <button onclick="playGame()">Press me to play</button>
+    <div class="container">
+        <div class="title">
+            <h1>Rock Paper Scissors using Javascript</h1>
+        </div>
+        <div class="winner">
+            <div>
+                <p>Winner : </p>
+            </div>
+        </div>
+        <div class="gameScore">
+            <div>
+                <p>Human Score</p>
+            </div>
+            <div>
+                <p>Computer Score</p>
+            </div>
+        </div>
+        <div class="btnChoice">
+            <div class="butt0n btnRock">
+                <button>Rock</button>
+            </div>
+            <div class="butt0n btnPaper">
+                <button>Paper</button>
+            </div>
+            <div class="butt0n btnScissors">
+                <button>Scissors</button>
+            </div>
+        </div>
+        <div class=btnPlay>
+            <button onclick="playGame()">Press me to play</button>
+        </div>
+    </div>
 </body>
 </html>
